@@ -1,10 +1,6 @@
 # Langchain-Python-Custom-Chatbot
 
 
-
-
-
-
 ## Overview
 
 This repository contains a custom chatbot built using the Langchain Python library. 
