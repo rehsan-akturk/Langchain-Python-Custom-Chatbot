@@ -19,11 +19,13 @@ The chatbot can translate Turkish words and sentences into English and engage in
 Before running the chatbot, make sure you have the following installed:
 
 - Python 3.6 or higher
+- openai
+- Langchain
 - Flask
 - Flask-SocketIO
 - OpenAI Python library
 - Faiss (for the similarity search)
--Langchain
+
 
 You'll also need to obtain an API key from OpenAI and replace `"your-api-key"` in the code with your actual API key.
 
