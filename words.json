@@ -1,0 +1,45 @@
+[
+    {
+        "turkish_words": "elma",
+        "english_words": "apple",
+        "aciklama": "Elma bir meyvedir."
+    },
+    {
+        "turkish_words": "masa",
+        "english_words": "table"
+       
+    },
+    {
+        "turkish_words": "kedi",
+        "english_words": "cat"
+     
+    },
+    {
+        "turkish_words": "kitap",
+        "english_words": "book"
+    },
+    {
+        "turkish_words": "gözlük",
+        "english_words": "glasses"
+    },
+    {
+        "turkish_words": "ev",
+        "english_words": "house"
+    },
+    {
+        "turkish_words": "araba",
+        "english_words": "car"
+    },
+    {
+        "turkish_words": "telefon",
+        "english_words": "phone"
+    },
+    {
+        "turkish_words": "çiçek",
+        "english_words": "flower"
+    },
+    {
+        "turkish_words": "bilgisayar",
+        "english_words": "computer"
+    }
+]

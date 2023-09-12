@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+    <style>
+        /* Add your CSS styles here */
+        #chat-box {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket Chat</h1>
+    <div id="chat-box">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <input type="text" id="message-input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script>
+        // Connect to the WebSocket server
+        const socket = io.connect('http://127.0.0.1:8080');
+
+        // Function to send a message to the server
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const message = messageInput.value;
+
+            if (message.trim() !== '') {
+                socket.emit('message_from_client', { content: message });
+                messageInput.value = '';
+            }
+        }
+
+        // Function to display a message in the chat box
+        function displayMessage(message) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<p>${message}</p>`;
+            // Scroll to the bottom of the chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // Listen for messages from the server
+        socket.on('update_chat', (messages) => {
+            for (const message of messages) {
+                displayMessage(`${message[0]}: ${message[1]}`);
+            }
+        });
+    </script>
+</body>
+</html>
