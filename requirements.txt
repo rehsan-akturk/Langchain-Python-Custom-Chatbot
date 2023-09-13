@@ -4,4 +4,5 @@ requests
 openai
 faiss-cpu
 langchain
-
+eventlet
+ 
